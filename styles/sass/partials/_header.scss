@@ -1,0 +1,56 @@
+header {
+    height: 100vh;
+    background: url(../assets/heroBackgroundAlt.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    nav {
+        text-align: center;
+        width: 750px;
+        position: absolute;
+        right: 0;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            justify-items: end;
+            padding: 0;
+
+            li {
+                text-transform: uppercase;
+                list-style-type: none;
+            }
+            
+            a {
+                width: 150px;
+                text-decoration: none;
+                color: $primaryFontColor;
+                padding: 10px 25px;
+
+            }
+
+            a:hover, a:focus {
+                background: $tertiaryFontColor;
+            }
+        }
+    }
+
+    .titleContainer {
+        position: absolute;
+        top: 30%;
+        left: 55%;
+        transform-origin: top left;
+        transform: rotate(18deg);
+        width: 350px;
+    }
+
+    p {
+        font-family: 'Raleway', sans-serif;
+        color: #fff;
+    }
+}
