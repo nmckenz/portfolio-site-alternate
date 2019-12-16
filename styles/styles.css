@@ -596,6 +596,10 @@ header .scrollWheel {
   margin: 25px 0;
 }
 
+.projectsSection .appDescriptionContainer p {
+  margin: 0.25rem;
+}
+
 .projectsSection .appLinks {
   margin-top: 50px;
 }
