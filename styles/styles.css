@@ -236,7 +236,6 @@ html {
 }
 
 body {
-  border: 1px solid red;
   font-family: 'Raleway', sans-serif;
   font-family: 'Oswald', sans-serif;
   font-family: 'Open Sans', sans-serif;
@@ -244,9 +243,15 @@ body {
   background: white;
 }
 
+.wrapper {
+  margin: 0 5%;
+}
+
 h1, h2 {
   text-transform: uppercase;
   color: #222222;
+  margin: 0;
+  padding: 5% 0;
 }
 
 h1 {
@@ -261,6 +266,11 @@ h2 {
   font-weight: 800;
 }
 
+p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
 header {
   height: 100vh;
   background: url(../assets/heroBackgroundAlt.png);
@@ -272,22 +282,20 @@ header {
 
 header nav {
   text-align: center;
-  width: 750px;
-  position: absolute;
-  right: 0;
 }
 
 header nav ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (125px)[5];
+      grid-template-columns: repeat(5, 125px);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  justify-items: end;
   padding: 0;
+  margin: 0;
+  margin-left: calc(100% - 625px);
 }
 
 header nav ul li {
@@ -296,10 +304,12 @@ header nav ul li {
 }
 
 header nav ul a {
-  width: 150px;
   text-decoration: none;
   color: #222222;
   padding: 10px 25px;
+  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
 }
 
 header nav ul a:hover, header nav ul a:focus {
@@ -319,7 +329,76 @@ header .titleContainer {
 
 header p {
   font-family: 'Raleway', sans-serif;
-  color: #fff;
+  color: #d6cdcd;
+  margin: 15px 5px;
+}
+
+header .scrollDown {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  left: 0;
+  margin: auto;
+  width: 34px;
+  height: 55px;
+}
+
+header .mouse {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #222222;
+  border-radius: 25px;
+  opacity: 0.75;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+header .scrollWheel {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #222222;
+  -webkit-animation-name: scroll;
+          animation-name: scroll;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
+  -webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+          animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    opacity: 0;
+  }
 }
 
 .aboutSection {
@@ -327,20 +406,130 @@ header p {
   background: #fff;
 }
 
-.aboutSection .headshotContainer .headshot {
+.aboutSection h2 {
+  text-align: right;
+  position: absolute;
+  top: -200px;
+  right: 50px;
+}
+
+.aboutSection .aboutContent {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 40%;
+      grid-template-columns: 1fr 40%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+  height: 100vh;
+}
+
+.aboutSection .headshotContainer {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  position: relative;
+}
+
+.aboutSection .headshotContainer .headshotGraphic {
+  position: relative;
   width: 350px;
   height: 350px;
-  border-radius: 50%;
-  border: 50px solid #fff;
+}
+
+.aboutSection .headshotContainer .headshot {
+  max-width: 100%;
+  position: absolute;
+  top: -100px;
+}
+
+.aboutSection .headshotContainer h2 {
+  position: absolute;
+  right: 0;
+  top: 5%;
 }
 
 .aboutSection .bioContainer {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin: auto 0;
+}
+
+.aboutSection .bioContainer div {
+  width: 80%;
+  margin-left: 20%;
+}
+
+.aboutSection .bioContainer p {
   font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.15rem;
+  font-weight: 400;
 }
 
 .skillsSection {
   height: 100vh;
   background: #101010;
+}
+
+.skillsSection h2 {
+  color: #fff;
+}
+
+.skillsSection ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  width: 80%;
+  height: 50vh;
+  margin-right: 20%;
+}
+
+.skillsSection i {
+  color: #f7484e;
+  font-size: 6rem;
+}
+
+.skillsSection li {
+  width: 100px;
+  height: 100px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.skillsSection li h5 {
+  color: #f7484e;
+}
+
+.skillsSection .html5Icon, .skillsSection .css3Icon, .skillsSection .jqueryIcon span {
+  text-transform: uppercase;
+}
+
+.skillsSection .javascriptIcon, .skillsSection .reactIcon, .skillsSection .firebaseIcon, .skillsSection .gitIcon, .skillsSection .githubIcon, .skillsSection .sassIcon, .skillsSection .vsIcon {
+  text-transform: capitalize;
+}
+
+.skillsSection .firebaseIconContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.skillsSection .firebaseIconContainer img {
+  max-width: 100%;
 }
 
 .projectsSection {
@@ -351,10 +540,134 @@ header p {
   background-position: center;
 }
 
+.projectsSection h2 {
+  text-align: right;
+}
+
+.projectsSection .slickContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.projectsSection .projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+}
+
+.projectsSection .screenshotContainer {
+  width: 100%;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.projectsSection .screenshotContainer img {
+  max-width: 100%;
+}
+
+.projectsSection .appDescriptionContainer {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.projectsSection .appDescriptionContainer h3 {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.projectsSection .appDescriptionContainer ul {
+  margin: 15px 0;
+}
+
+.projectsSection .appDescriptionContainer p {
+  margin: 0.25rem;
+}
+
+.projectsSection .appLinks {
+  margin-top: 50px;
+}
+
+.projectsSection .appLinks a {
+  text-decoration: none;
+  width: 150px;
+  background: #222222;
+  color: #d6cdcd;
+  padding: 10px 25px;
+  text-transform: uppercase;
+}
+
+.projectsSection .appLinks a:hover, .projectsSection .appLinks a:focus {
+  color: #f7484e;
+}
+
+.projectsSection .dineAndDashProject span {
+  text-decoration: line-through;
+}
+
 .contactSection {
   height: 100vh;
   background: url(../assets/contactBackground.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.contactSection form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contactSection form input, .contactSection form textarea, .contactSection form button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 3px solid #f7484e;
+  color: #222222;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.contactSection form button {
+  background: #f7484e;
+  color: #222222;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+
+.contactSection .socialLinks {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-column-gap: 25px;
+  grid-row-gap: 0px;
+  padding: 0;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.contactSection .socialLinks li {
+  list-style-type: none;
+}
+
+.contactSection .socialLinks a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 3rem;
+}
+
+.contactSection .socialLinks a:hover, .contactSection .socialLinks a:focus {
+  color: #f7484e;
 }

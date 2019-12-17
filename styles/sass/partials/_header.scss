@@ -8,18 +8,16 @@ header {
 
     nav {
         text-align: center;
-        width: 750px;
-        position: absolute;
-        right: 0;
 
         ul {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(5, 125px);
             grid-template-rows: 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-            justify-items: end;
             padding: 0;
+            margin: 0;
+            margin-left: calc(100% - 625px);
 
             li {
                 text-transform: uppercase;
@@ -27,11 +25,12 @@ header {
             }
             
             a {
-                width: 150px;
                 text-decoration: none;
                 color: $primaryFontColor;
                 padding: 10px 25px;
-
+                font-size: 1rem;
+                display: inline-block;
+                width: 100%;
             }
 
             a:hover, a:focus {
@@ -51,6 +50,44 @@ header {
 
     p {
         font-family: 'Raleway', sans-serif;
-        color: #fff;
+        color: $secondaryFontColor;
+        margin: 15px 5px;
+    }
+
+    .scrollDown {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        left: 0;
+        margin: auto;
+        width :34px;
+        height: 55px;
+    }
+
+    .mouse {
+        width: 3px;
+        padding: 10px 15px;
+        height: 35px;
+        border: 2px solid $primaryFontColor;
+        border-radius: 25px;
+        opacity: 0.75;
+        box-sizing: content-box;
+    }
+
+    .scrollWheel {
+        width: 3px;
+        height: 10px;
+        border-radius: 25%;
+        background-color: $primaryFontColor;
+        animation-name: scroll;
+        animation-duration: 2.2s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes scroll {
+        0% { opacity: 0; }
+        10% { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(15px); opacity: 0;}
     }
 }

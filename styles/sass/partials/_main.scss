@@ -1,84 +1,270 @@
+// ABOUT SECTION========================================
+// begin------------------------------------------------
 .aboutSection {
     height: 100vh;
-    // background: url(../assets/aboutBackgroundWithHeadshot.png);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
     background: #fff;
 
-    .headshotContainer {
-        // width: 500px;
-        // height: 500px;
+    h2 {
+        text-align: right;
+        position: absolute;
+        top: -200px;
+        right: 50px;
+    }
 
-        .headshot {
+    .aboutContent {
+        display: grid;
+        grid-template-columns: 1fr 40%;
+        grid-template-rows: 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 0px;
+        height: 100vh;
+    }
+
+    .headshotContainer {
+        grid-column: 2;
+        grid-row: 1;
+        position: relative;
+
+        .headshotGraphic {
+            position: relative;
             width: 350px;
             height: 350px;
-            border-radius: 50%;
-            border: 50px solid #fff;
+        }
+
+        .headshot {
+            max-width: 100%;
+            position: absolute;
+            top: -100px;
+        }
+
+        h2 {
+            position: absolute;
+            right: 0;
+            top: 5%;
         }
     }
 
     .bioContainer {
-        font-family: 'Oswald', sans-serif;
+        grid-column: 1;
+        grid-row: 1;
+        margin: auto 0;
+
+        div {
+            width: 80%;
+            margin-left: 20%
+        }
+        
+        p {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            line-height: 2.15rem;
+            font-weight: 400;
+        }
     }
 }
+// end--------------------------------------------------
+// ABOUT SECTION========================================
 
+
+
+// SKILLS SECTION=======================================
+// begin------------------------------------------------
 .skillsSection {
     height: 100vh;
-    // background: url(../assets/skillsBackground.png);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: center;
     background: #101010;
-}
 
+    h2 {
+        color: #fff;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        justify-items: start;
+        align-items: center;
+        padding: 0;
+        width: 80%;
+        height: 50vh;
+        margin-right: 20%;
+    }
+
+    i {
+        color: $tertiaryFontColor;
+        font-size: 6rem;
+    }
+    
+    li {
+        width: 100px;
+        height: 100px;
+        list-style-type: none;
+        text-align: center;
+
+        h5 {
+            color: $tertiaryFontColor
+        }
+    }
+
+    .html5Icon, .css3Icon, .jqueryIcon span {
+        text-transform: uppercase;
+    }
+
+    .javascriptIcon, .reactIcon, .firebaseIcon, .gitIcon, .githubIcon, .sassIcon, .vsIcon {
+        text-transform: capitalize;
+    }
+
+    .firebaseIconContainer {
+        width: 100%;
+        height: 100%;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
+// end--------------------------------------------------
+// SKILLS SECTION=======================================
+
+
+
+// PROJECTS SECTION=====================================
+// begin------------------------------------------------
 .projectsSection {
     height: 100vh;
     background: url(../assets/projectsBackground.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-}
 
+    h2 {
+        text-align: right;
+    }
+
+    .slickContainer {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 0px;
+    }
+
+    .screenshotContainer {
+        width: 100%;
+        grid-column: 2;
+        grid-row: 1;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .appDescriptionContainer {
+        grid-column: 1;
+        grid-row: 1;
+
+        h3 {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin: 15px 0;
+        }
+        
+        p {
+            margin: 0.25rem;
+        }
+    }
+
+
+    .appLinks {
+        margin-top: 50px;
+
+        a {
+            text-decoration: none;
+            width: 150px;
+            background: $primaryFontColor;
+            color: $secondaryFontColor;
+            padding: 10px 25px;
+            text-transform: uppercase;
+        }
+
+        a:hover, a:focus {
+            color: $tertiaryFontColor;
+        }
+    }
+
+    .dineAndDashProject span {
+        text-decoration: line-through;
+    }
+}
+// end--------------------------------------------------
+// PROJECTS SECTION=====================================
+
+
+
+// CONTACT SECTION======================================
+// begin------------------------------------------------
 .contactSection {
     height: 100vh;
     background: url(../assets/contactBackground.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+
+        input, textarea, button {
+            width: 100%;
+            background: rgba(255,255,255,0.4);
+            border: 3px solid $tertiaryFontColor;
+            color: $primaryFontColor;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background: $tertiaryFontColor;
+            color: $primaryFontColor;
+            text-transform: uppercase;
+            padding: 15px 0;
+        }
+    }
+
+    .socialLinks {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 0px;
+        padding: 0;
+        width: 30%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 25px;
+
+        li {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: $primaryFontColor;
+            font-size: 3rem;
+        }
+
+        a:hover, a:focus {
+            color: $tertiaryFontColor;
+        }
+    }
 }
-
-// main {
-//     text-align: center;
-// }
-
-// .loader {
-//     color: #f7be16;
-//     margin-top: 30vh;
-// }
-
-// .loader p {
-//     display: inline;
-//     margin: 5vh 0;
-//     font-size: 2rem;
-//     padding-left: 50px;
-// }
-
-// @keyframes blink {50% { color: transparent }}
-// .loaderDot { animation: 1s blink infinite }
-// .loaderDot:nth-child(3) { animation-delay: 250ms }
-// .loaderDot:nth-child(4) { animation-delay: 500ms }
-
-// .socialLinks {
-//     list-style-type: none;
-//     width: 20%;
-//     display: flex;
-//     justify-content: space-between;
-//     margin: 0 auto;
-//     margin-top: 15vh;
-// }
-
-// .socialLinks a {
-//     color: #293462;
-//     font-size: 1.5rem;
-// }
+// end--------------------------------------------------
+// CONTACT SECTION======================================

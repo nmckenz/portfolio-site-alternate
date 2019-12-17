@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald:400,500|Raleway:400,800&display=swap"
-        rel="stylesheet">
-    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+        rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet" />
     <link rel="stylesheet"
-        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Nicholas McKenzie</title>
 </head>
 
@@ -23,15 +25,24 @@
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#skills">skills</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#projects">projects</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
         <!-- end nav -->
-        <div class="titleContainer">
-            <h1>nicholas mckenzie</h1>
-            <p>web developer</p>
+        <!-- begin wrapper -->
+        <div class="wrapper">
+            <div class="titleContainer">
+                <h1>nicholas m<sup>c</sup>kenzie</h1>
+                <p>{web developer}</p>
+            </div>
+            <div class="scrollDown">
+                <div class="mouse">
+                    <div class="scrollWheel"></div>
+                </div>
+            </div>
         </div>
+        <!-- end wrapper -->
     </header>
     <!-- end header -->
 
@@ -39,90 +50,198 @@
     <main>
         <!-- begin about section -->
         <section id="about" class="aboutSection">
-            <h2>about</h2>
-            <div class="headshotContainer">
-                <img src="./assets/headshot.jpg" alt="Profile picture of Nicholas McKenzie, professional web developer" class="headshot">
-                <img src="./assets/headshotStripe.png" alt="">
+            <!-- begin wrapper -->
+            <div class="wrapper">
+                <div class="aboutContent">
+                    <div class="headshotContainer">
+                        <div class="headshotGraphic">
+                            <img src="./assets/headshotGraphic.png" alt="Profile picture of Nicholas McKenzie, professional web developer" class="headshot" />
+                        </div>
+                        <h2>about</h2>
+                    </div>
+                    <div class="bioContainer">
+                        <div>
+                            <p>
+                                I’m a Front End Developer based in Toronto. For the past 6 years I have been a Stay-at-Home Dad to Harrison. Now
+                                that my
+                                son is older, I’m excited to continue my career! My previous experience working in IT and education in Psychology
+                                informs my approach to development: understanding how people think is just as important as understanding technical
+                                components. I’m looking to explore opportunities that challenge me as a developer and work with a team that would
+                                benefit from life experience, perseverance and a solutions-focused mindset.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="bioContainer">
-                <p>
-                    I’m a Front End Developer based in Toronto. For the past 6 years I have been a Stay-at-Home Dad to Harrison. Now
-                    that my
-                    son is older, I’m excited to continue my career! My previous experience working in IT and education in Psychology
-                    informs my approach to development: understanding how people think is just as important as understanding technical
-                    components. I’m looking to explore opportunities that challenge me as a developer and work with a team that would
-                    benefit from life experience, perseverance and a solutions-focused mindset.
-                </p>
-            </div>
+            <!-- end wrapper -->
         </section>
         <!-- end about section -->
 
         <!-- begin skills section -->
         <section id="skills" class="skillsSection">
-            <h2>skills</h2>
+            <!-- begin wrapper -->
+            <div class="wrapper">
+                <h2>skills</h2>
+                <ul class="skillsList">
+                    <li class="html5Icon">
+                        <i class="devicon-html5-plain" aria-hidden="true" title="HTML5"></i>
+                        <h5>html5</h5>
+                    </li>
+                
+                    <li class="css3Icon">
+                        <i class="devicon-css3-plain" aria-hidden="true" title="CSS3"></i>
+                        <h5>css3</h5>
+                    
+                    </li>
+                    <li class="javascriptIcon">
+                        <i class="devicon-javascript-plain" aria-hidden="true" title="Javascript"></i>
+                        <h5>javascript</h5>
+                    </li>
+                    <li class="jqueryIcon">
+                        <i class="devicon-jquery-plain" aria-hidden="true" title="jQuery"></i>
+                        <h5>j<span>q</span>uery</h5>
+                    </li>
+                    <li class="reactIcon">
+                        <i class="devicon-react-original" aria-hidden="true" title="REACT"></i>
+                        <h5>react</h5>
+                    </li>
+                    <li class="firebaseIcon">
+                        <div class="firebaseIconContainer">
+                            <img src="./assets/firebaseIcon.png" alt="Firebase icon">
+                        </div>
+                        <h5>firebase</h5>
+                    </li>
+                    <li class="gitIcon">
+                        <i class="devicon-git-plain" aria-hidden="true" title="Git"></i>
+                        <h5>git</h5>
+                    </li>
+                    <li class="githubIcon">
+                        <i class="devicon-github-plain" aria-hidden="true" title="Github"></i>
+                        <h5>github</h5>
+                    </li>
+                    <li class="sassIcon">
+                        <i class="devicon-sass-original" aria-hidden="true" title="Sass"></i>
+                        <h5>sass</h5>
+                    </li>
+                    <li class="vsIcon">
+                        <i class="devicon-visualstudio-plain" aria-hidden="true" title="Visual Studio"></i>
+                        <h5>visual studio</h5>
+                    </li>
+                </ul>
+            </div>
+            <!-- end wrapper -->
         </section>
         <!-- end skills section -->
 
         <!-- begin projects section -->
         <section id="projects" class="projectsSection">
-            <h2>projects</h2>
-            <ul class="skillsList">
-                <li>
-                    <div>
-                        <i class="devicon-html5-plain" aria-hidden="true" title="HTML5"></i>
-                        <span class="visuallyhidden">html5</span>
-                        <p>html5</p>
+            <!-- begin wrapper -->
+            <div class="wrapper">
+                <h2>projects</h2>
+                <div class="slickContainer">
+                    <div class="projects dineAndDashProject">
+                        <div class="screenshotContainer">
+                            <img src="./assets/dineAndDashMockup.png" alt="Screenshot of the Dine and Dash application">
+                        </div>
+                        <div class="appDescriptionContainer">
+                            <h3>Dine and Dash</h3>
+                            <p>A fun app that helps users find a nearby restaurant and closest means of <span>skipping out on</span> pedalling away from the bill! </p>
+                            <ul>
+                                <li><p>Users can search locations worldwide</p></li>
+                                <li><p>Filter and sort restaurants by rating, cuisine and price</p></li>
+                                <li><p>Choose a restaurant for more details and see an interactive map with route guidance to nearest bike share location</p></li>
+                                <li><p>Built using HTML5 | CSS3 | React | REST APIs | Sass</p></li>
+                            </ul>
+                            <div class="appLinks">
+                                <a href="https://dineanddashjuno.github.io/projectSix/">live</a>
+                                <a href="https://github.com/dineAndDashJuno/projectSix">github</a>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <div>
-                    <li>
-                        <i class="devicon-css3-plain" aria-hidden="true" title="CSS3"></i>
-                        <span class="visuallyhidden">css3</span>
-                        <p>css3</p>
+                    <div class="projects ladybugRunProject">
+                        <div class="screenshotContainer">
+                            <img src="./assets/ladybugRunMockup.png" alt="Screenshot of the Ladybug Run application">
+                        </div>
+                        <div class="appDescriptionContainer">
+                            <h3>Ladybug Run</h3>
+                            <p>An app inspired by a coding toy my son has that aims to foster understanding of object oriented programming
+                            and encourage his skills in problem solving, critical thinking, planning & sequencing</p>
+                            <ul>
+                                <li><p>Users select from a list of movement modules in an effort to guide the ladybug to safety</p></li>
+                                <li><p>Built using HTML5 | CSS3 | Javascript | jQuery | Sass</p></li>
+                            </ul>
+                            <div class="appLinks">
+                                <a href="https://nmckenz.github.io/nicholasMckenzieProjectThree/">live</a>
+                                <a href="https://github.com/nmckenz/nicholasMckenzieProjectThree">github</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects shoeKlosetProject">
+                        <div class="screenshotContainer">
+                            <img src="./assets/shoeKlosetMockup.png" alt="Screenshot of the Shoe Kloset PSD conversion">
+                        </div>
+                        <div class="appDescriptionContainer">
+                            <h3>Shoe Kloset</h3>
+                            <p>A multi-page PSD conversion</p>
+                            <ul>
+                                <li><p>Features a fully responsive design and renders beautifully across all devices</p></li>
+                                <li><p>Built using HTML5 | CSS3 | Sass </p></li>
+                            </ul>
+                            <div class="appLinks">
+                                <a href="https://nmckenz.github.io/Bootcamp-Project2/">live</a>
+                                <a href="https://github.com/nmckenz/Bootcamp-Project2">github</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </li>
-                <li>
-                    <i class="devicon-javascript-plain" aria-hidden="true" title="Javascript"></i>
-                    <span class="visuallyhidden">javascript</span>
-                    <p>javascript</p>
-                </li>
-                <li>
-                    <i class="devicon-jquery-plain" aria-hidden="true" title="jQuery"></i>
-                    <span class="visuallyhidden">jquery</span>
-                    <p>jquery</p>
-                </li>
-                <li>
-                    <i class="devicon-react-original" aria-hidden="true" title="REACT"></i>
-                    <span class="visuallyhidden">react</span>
-                    <p>react</p>
-                </li>
-                <li>
-                    <i class="devicon-git-plain" aria-hidden="true" title="Git"></i>
-                    <span class="visuallyhidden">Git</span>
-                    <p>Git</p>
-                </li>
-                <li>
-                    <i class="devicon-github-plain" aria-hidden="true" title="Github"></i>
-                    <span class="visuallyhidden">Github</span>
-                    <p>Github</p>
-                </li>
-                <li>
-                    <i class="devicon-sass-original" aria-hidden="true" title="Sass"></i>
-                    <span class="visuallyhidden">Sass</span>
-                    <p>Sass</p>
-                </li>
-                <li>
-                    <i class="devicon-visualstudio-plain" aria-hidden="true" title="Visual Studio"></i>
-                    <span class="visuallyhidden">visual studio</span>
-                    <p>visual studio</p>
-                </li>
-            </ul>
+            </div>
+            <!-- end wrapper -->
         </section>
         <!-- end projects section -->
 
         <!-- begin contact section -->
         <section id="contact" class="contactSection">
-            <h2>contact</h2>
+            <!-- begin wrapper -->
+            <div class="wrapper">
+                <h2>contact</h2>
+
+                <form action="http://www.focuspocus.io/magic/bab5a94d7d5e15f185bf463d174fb4f1" method="POST">
+                    <label for="name" class="visuallyhidden">name</label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                
+                    <label for="email" class="visuallyhidden">email address</label>
+                    <input type="email" id="email" name="email" placeholder="E-mail">
+                
+                    <label for="message" class="visuallyhidden">comment</label>
+                    <textarea name="message" id="message" name="message" cols="30" rows="7" placeholder="Message"></textarea>
+                
+                    <button type="submit">submit</button>
+                </form>
+
+                <ul class="socialLinks">
+                    <li>
+                        <a href="https://www.linkedin.com/in/nicholas-a-mckenzie">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/nmckenz">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/nmckenz_codes">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@nicholas.a.mckenzie">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end wrapper -->
         </section>
         <!-- end contact section -->
     </main>
@@ -134,48 +253,9 @@
     </footer>
     <!-- end footer -->
 
-
-
-
-
-
-
-
-    <!-- <main>
-        <div class="loader">
-            <p>Loading</p>
-            <span class="loaderDot">.</span>
-            <span class="loaderDot">.</span>
-            <span class="loaderDot">.</span>
-    </div>
-
-    <div>
-        
-    </div>
-    <ul class="socialLinks">
-        <li>
-            <a href="https://www.linkedin.com/in/nicholas-a-mckenzie">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/nmckenz">
-                <i class="fab fa-github"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://twitter.com/nmckenz_codes">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </li>
-        <li>
-            <a href="https://medium.com/@nicholas.a.mckenzie">
-                <i class="fab fa-medium-m"></i>
-            </a>
-        </li>
-    </ul>
-
-    </main> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+    <script src="./scripts/script.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 
 </html>
