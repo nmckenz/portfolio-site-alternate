@@ -8,18 +8,16 @@ header {
 
     nav {
         text-align: center;
-        width: 750px;
-        position: absolute;
-        right: 0;
 
         ul {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(5, 125px);
             grid-template-rows: 1fr;
             grid-column-gap: 0px;
             grid-row-gap: 0px;
-            justify-items: end;
             padding: 0;
+            margin: 0;
+            margin-left: calc(100% - 625px);
 
             li {
                 text-transform: uppercase;
@@ -27,11 +25,12 @@ header {
             }
             
             a {
-                width: 150px;
                 text-decoration: none;
                 color: $primaryFontColor;
                 padding: 10px 25px;
-
+                font-size: 1rem;
+                display: inline-block;
+                width: 100%;
             }
 
             a:hover, a:focus {
@@ -57,7 +56,6 @@ header {
 
     .scrollDown {
         position: absolute;
-        // top: 0;
         right: 0;
         bottom: 15px;
         left: 0;

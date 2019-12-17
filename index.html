@@ -25,7 +25,7 @@
                 <li><a href="#home">home</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#skills">skills</a></li>
-                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#projects">projects</a></li>
                 <li><a href="#contact">contact</a></li>
             </ul>
         </nav>
@@ -55,8 +55,7 @@
                 <div class="aboutContent">
                     <div class="headshotContainer">
                         <div class="headshotGraphic">
-                            <img src="./assets/headshot.jpg" alt="Profile picture of Nicholas McKenzie, professional web developer" class="headshot">
-                            <img src="./assets/headshotStripe.png" alt="Stripe graphic" class="stripe">
+                            <img src="./assets/headshotGraphic.png" alt="Profile picture of Nicholas McKenzie, professional web developer" class="headshot" />
                         </div>
                         <h2>about</h2>
                     </div>
@@ -142,7 +141,7 @@
                 <div class="slickContainer">
                     <div class="projects dineAndDashProject">
                         <div class="screenshotContainer">
-                            <img src="./assets/dineAndDashScreenshot.png" alt="Screenshot of the Dine and Dash application">
+                            <img src="./assets/dineAndDashMockup.png" alt="Screenshot of the Dine and Dash application">
                         </div>
                         <div class="appDescriptionContainer">
                             <h3>Dine and Dash</h3>
@@ -161,7 +160,7 @@
                     </div>
                     <div class="projects ladybugRunProject">
                         <div class="screenshotContainer">
-                            <img src="./assets/ladybugRunScreenshot.png" alt="Screenshot of the Ladybug Run application">
+                            <img src="./assets/ladybugRunMockup.png" alt="Screenshot of the Ladybug Run application">
                         </div>
                         <div class="appDescriptionContainer">
                             <h3>Ladybug Run</h3>
@@ -179,7 +178,7 @@
                     </div>
                     <div class="projects shoeKlosetProject">
                         <div class="screenshotContainer">
-                            <img src="./assets/shoeKlosetScreenshot.png" alt="Screenshot of the Shoe Kloset PSD conversion">
+                            <img src="./assets/shoeKlosetMockup.png" alt="Screenshot of the Shoe Kloset PSD conversion">
                         </div>
                         <div class="appDescriptionContainer">
                             <h3>Shoe Kloset</h3>
@@ -206,15 +205,15 @@
             <div class="wrapper">
                 <h2>contact</h2>
 
-                <form action="submit">
+                <form action="http://www.focuspocus.io/magic/bab5a94d7d5e15f185bf463d174fb4f1" method="POST">
                     <label for="name" class="visuallyhidden">name</label>
-                    <input type="text" id="name" placeholder="Name">
+                    <input type="text" id="name" name="name" placeholder="Name">
                 
                     <label for="email" class="visuallyhidden">email address</label>
-                    <input type="email" id="email" placeholder="E-mail">
+                    <input type="email" id="email" name="email" placeholder="E-mail">
                 
-                    <label for="comment" class="visuallyhidden">comment</label>
-                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Message"></textarea>
+                    <label for="message" class="visuallyhidden">comment</label>
+                    <textarea name="message" id="message" name="message" cols="30" rows="7" placeholder="Message"></textarea>
                 
                     <button type="submit">submit</button>
                 </form>
@@ -241,10 +240,6 @@
                         </a>
                     </li>
                 </ul>
-
-                <!-- <div class="scrollToTop">
-                    <a href="#home"><span></span></a>
-                </div class="scrollToTop"> -->
             </div>
             <!-- end wrapper -->
         </section>

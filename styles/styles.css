@@ -282,22 +282,20 @@ header {
 
 header nav {
   text-align: center;
-  width: 750px;
-  position: absolute;
-  right: 0;
 }
 
 header nav ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (125px)[5];
+      grid-template-columns: repeat(5, 125px);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  justify-items: end;
   padding: 0;
+  margin: 0;
+  margin-left: calc(100% - 625px);
 }
 
 header nav ul li {
@@ -306,10 +304,12 @@ header nav ul li {
 }
 
 header nav ul a {
-  width: 150px;
   text-decoration: none;
   color: #222222;
   padding: 10px 25px;
+  font-size: 1rem;
+  display: inline-block;
+  width: 100%;
 }
 
 header nav ul a:hover, header nav ul a:focus {
@@ -435,22 +435,14 @@ header .scrollWheel {
 
 .aboutSection .headshotContainer .headshotGraphic {
   position: relative;
+  width: 350px;
+  height: 350px;
 }
 
 .aboutSection .headshotContainer .headshot {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  border: 50px solid #fff;
+  max-width: 100%;
   position: absolute;
-  left: 10%;
-  top: -25px;
-}
-
-.aboutSection .headshotContainer .stripe {
-  position: absolute;
-  left: 35%;
-  top: -145px;
+  top: -100px;
 }
 
 .aboutSection .headshotContainer h2 {
@@ -468,14 +460,14 @@ header .scrollWheel {
 }
 
 .aboutSection .bioContainer div {
-  width: 70%;
-  margin-left: 30%;
+  width: 80%;
+  margin-left: 20%;
 }
 
 .aboutSection .bioContainer p {
   font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1.5rem;
+  line-height: 2.15rem;
   font-weight: 400;
 }
 
@@ -589,11 +581,11 @@ header .scrollWheel {
 
 .projectsSection .appDescriptionContainer h3 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .projectsSection .appDescriptionContainer ul {
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .projectsSection .appDescriptionContainer p {
@@ -609,7 +601,7 @@ header .scrollWheel {
   width: 150px;
   background: #222222;
   color: #d6cdcd;
-  padding: 15px 25px;
+  padding: 10px 25px;
   text-transform: uppercase;
 }
 
@@ -639,7 +631,7 @@ header .scrollWheel {
   background: rgba(255, 255, 255, 0.4);
   border: 3px solid #f7484e;
   color: #222222;
-  padding: 15px;
+  padding: 5px;
   margin-bottom: 15px;
 }
 
