@@ -290,6 +290,13 @@ header nav {
   margin-left: 70%;
 }
 
+@media (max-width: 900px) {
+  header nav {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 header nav ul {
   margin: 0;
   padding: 0;
@@ -348,6 +355,12 @@ header .titleContainer {
   width: 350px;
 }
 
+@media (max-width: 900px) {
+  header .titleContainer {
+    left: 62.5%;
+  }
+}
+
 header p {
   font-family: 'Raleway', sans-serif;
   color: #d6cdcd;
@@ -366,6 +379,15 @@ header p {
   right: 50px;
 }
 
+@media (max-width: 900px) {
+  .aboutSection h2 {
+    text-align: left;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
 .aboutSection .aboutContent {
   display: -ms-grid;
   display: grid;
@@ -378,12 +400,30 @@ header p {
   height: 100vh;
 }
 
+@media (max-width: 900px) {
+  .aboutSection .aboutContent {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 10% 1fr;
+        grid-template-rows: 10% 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 25px;
+  }
+}
+
 .aboutSection .headshotContainer {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
   grid-row: 1;
   position: relative;
+}
+
+@media (max-width: 900px) {
+  .aboutSection .headshotContainer {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
 }
 
 .aboutSection .headshotContainer .headshotGraphic {
@@ -396,6 +436,13 @@ header p {
   max-width: 100%;
   position: absolute;
   top: -100px;
+}
+
+@media (max-width: 900px) {
+  .aboutSection .headshotContainer .headshot {
+    left: 125%;
+    top: -105px;
+  }
 }
 
 .aboutSection .headshotContainer h2 {
@@ -418,9 +465,24 @@ header p {
       grid-template-rows: 1fr;
 }
 
+@media (max-width: 900px) {
+  .aboutSection .bioContainer {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    grid-column-gap: 25px;
+  }
+}
+
 .aboutSection .bioContainer div {
   width: 80%;
   margin-left: 20%;
+}
+
+@media (max-width: 900px) {
+  .aboutSection .bioContainer div {
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .aboutSection .bioContainer h3 {
@@ -587,7 +649,7 @@ header p {
 
 .projectsSection {
   height: 100vh;
-  background: url(../assets/projectsBackground.png);
+  background: url(../assets/projectsBackground.png) #f7484e;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -595,7 +657,7 @@ header p {
 
 @media (max-width: 900px) {
   .projectsSection {
-    background-position: 10%;
+    background-position: 40% 150px;
   }
 }
 
@@ -812,6 +874,12 @@ header p {
 .contactSection nav {
   width: 30%;
   margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .contactSection nav {
+    width: 100%;
+  }
 }
 
 .contactSection nav ul {

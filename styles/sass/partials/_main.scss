@@ -9,6 +9,13 @@
         position: absolute;
         top: -200px;
         right: 50px;
+
+        @include mqTablet {
+            text-align: left;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
     }
 
     .aboutContent {
@@ -18,12 +25,23 @@
         grid-column-gap: 25px;
         grid-row-gap: 0px;
         height: 100vh;
+
+        @include mqTablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: 10% 1fr;
+            grid-column-gap: 0;
+            grid-row-gap: 25px;
+        }
     }
 
     .headshotContainer {
         grid-column: 2;
         grid-row: 1;
         position: relative;
+
+        @include mqTablet {
+            grid-column: 1;
+        }
 
         .headshotGraphic {
             position: relative;
@@ -35,6 +53,11 @@
             max-width: 100%;
             position: absolute;
             top: -100px;
+
+            @include mqTablet {
+                left: 125%;
+                top: -105px;
+            }
         }
 
         h2 {
@@ -51,11 +74,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
-        // grid-column-gap: 25px;
+
+        @include mqTablet {
+            grid-row: 2;
+            grid-column-gap: 25px;
+        }
 
         div {
             width: 80%;
-            margin-left: 20%
+            margin-left: 20%;
+
+            @include mqTablet {
+                width: 100%;
+                margin: 0;
+            }
         }
 
         h3 {
@@ -214,13 +246,13 @@
 // begin------------------------------------------------
 .projectsSection {
     height: 100vh;
-    background: url(../assets/projectsBackground.png);
+    background: url(../assets/projectsBackground.png) $tertiaryFontColor;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     @include mqTablet {
-        background-position: 10%;
+        background-position: 40% 150px;
     }
 
     h2 {
@@ -410,6 +442,10 @@
     nav {
         width: 30%;
         margin: 0 auto;
+
+        @include mqTablet {
+            width: 100%;
+        }
 
         ul {
             margin: 0;
