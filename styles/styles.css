@@ -286,39 +286,55 @@ header {
 }
 
 header nav {
-  text-align: center;
+  width: 30%;
+  margin-left: 70%;
 }
 
 header nav ul {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (125px)[5];
-      grid-template-columns: repeat(5, 125px);
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  padding: 0;
   margin: 0;
-  margin-left: calc(100% - 625px);
+  padding: 0;
 }
 
 header nav ul li {
-  text-transform: uppercase;
-  list-style-type: none;
+  display: inline;
+  text-align: center;
 }
 
 header nav ul a {
+  display: inline-block;
+  width: 20%;
+  padding: .75rem 0;
+  margin: 0;
   text-decoration: none;
   color: #222222;
-  padding: 10px 25px;
   font-size: 1rem;
-  display: inline-block;
-  width: 100%;
+  text-transform: uppercase;
 }
 
-header nav ul a:hover, header nav ul a:focus {
+header nav ul hr {
+  height: .25rem;
+  width: 20%;
+  margin: 0;
   background: #f7484e;
+  border: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+header nav ul .about:hover ~ hr {
+  margin-left: 20%;
+}
+
+header nav ul .skills:hover ~ hr {
+  margin-left: 40%;
+}
+
+header nav ul .projects:hover ~ hr {
+  margin-left: 60%;
+}
+
+header nav ul .contact:hover ~ hr {
+  margin-left: 80%;
 }
 
 header .titleContainer {
@@ -394,6 +410,12 @@ header p {
   -ms-grid-row: 1;
   grid-row: 1;
   margin: auto 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
 }
 
 .aboutSection .bioContainer div {
@@ -401,10 +423,57 @@ header p {
   margin-left: 20%;
 }
 
+.aboutSection .bioContainer h3 {
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+}
+
+.aboutSection .bioContainer h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 5px;
+  opacity: 1;
+  margin: 5px 0 0;
+  background: #f7484e;
+}
+
 .aboutSection .bioContainer p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 2.15rem;
-  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.aboutSection .bioContainer a {
+  text-decoration: none;
+  color: #222222;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+.aboutSection .bioContainer a::before, .aboutSection .bioContainer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  opacity: 0;
+  background-color: #f63036;
+}
+
+.aboutSection .bioContainer a:hover::before, .aboutSection .bioContainer a:hover::after, .aboutSection .bioContainer a:focus::before, .aboutSection .bioContainer a:focus::after {
+  width: 100%;
+  opacity: 1;
 }
 
 .skillsSection {
@@ -691,17 +760,25 @@ header p {
   padding: 0;
   width: 35%;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 25px;
+  margin: 25px auto 75px;
 }
 
 .contactSection .socialLinks li {
   list-style-type: none;
 }
 
+@media (max-width: 900px) {
+  .contactSection .socialLinks {
+    width: 100%;
+  }
+}
+
 .contactSection .socialLinks a {
   text-decoration: none;
   color: #222222;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: relative;
   font-size: 3rem;
 }
 
@@ -711,12 +788,76 @@ header p {
   }
 }
 
-.contactSection .socialLinks a:hover, .contactSection .socialLinks a:focus {
-  color: #f7484e;
+.contactSection .socialLinks a::before, .contactSection .socialLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0px;
+  height: 5px;
+  margin: 5px 0 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  opacity: 0;
+  background-color: #f63036;
 }
 
-@media (max-width: 900px) {
-  .contactSection .socialLinks {
-    width: 100%;
-  }
+.contactSection .socialLinks a:hover::before, .contactSection .socialLinks a:hover::after, .contactSection .socialLinks a:focus::before, .contactSection .socialLinks a:focus::after {
+  width: 80%;
+  opacity: 1;
+}
+
+.contactSection nav {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.contactSection nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.contactSection nav ul li {
+  display: inline;
+  text-align: center;
+}
+
+.contactSection nav ul a {
+  display: inline-block;
+  width: 20%;
+  padding: .75rem 0;
+  margin: 0;
+  text-decoration: none;
+  color: #222222;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.contactSection nav ul hr {
+  height: .25rem;
+  width: 20%;
+  margin: 0;
+  background: #f7484e;
+  border: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  margin-left: 80%;
+}
+
+.contactSection nav ul .home:hover ~ hr {
+  margin-left: 0%;
+}
+
+.contactSection nav ul .about:hover ~ hr {
+  margin-left: 20%;
+}
+
+.contactSection nav ul .skills:hover ~ hr {
+  margin-left: 40%;
+}
+
+.contactSection nav ul .projects:hover ~ hr {
+  margin-left: 60%;
 }

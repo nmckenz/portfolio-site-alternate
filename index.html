@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Nicholas McKenzie</title>
 </head>
 
@@ -22,11 +24,12 @@
         <!-- begin nav -->
         <nav>
             <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about</a></li>
-                <li><a href="#skills">skills</a></li>
-                <li><a href="#projects">projects</a></li>
-                <li><a href="#contact">contact</a></li>
+                <li class="home"><a href="#home">home</a></li class=""><!--
+                --><li class="about"><a href="#about">about</a></li><!--
+                --><li class="skills"><a href="#skills">skills</a></li><!--
+                --><li class="projects"><a href="#projects">projects</a></li><!--
+                --><li class="contact"><a href="#contact">contact</a></li>
+                <hr />
             </ul>
         </nav>
         <!-- end nav -->
@@ -36,19 +39,6 @@
                 <h1>nicholas m<sup>c</sup>kenzie</h1>
                 <p>{web developer}</p>
             </div>
-
-
-
-            <!-- <div class="scrollDown">
-                <div class="mouse">
-                    <div class="scrollWheel"></div>
-                </div>
-            </div> -->
-
-
-
-
-            
         </div>
         <!-- end wrapper -->
     </header>
@@ -67,12 +57,19 @@
                         </div>
                         <h2>about</h2>
                     </div>
-                    <div class="bioContainer">
+                    <div class="bioContainer" data-aos="slide-right">
                         <div>
+                            <h3>personal</h3>
                             <p>
                                 I’m a Front End Developer based in Toronto. For the past 6 years I have been a Stay-at-Home Dad to Harrison. Now
-                                that my son is older, I’m excited to continue my career! 
+                                that my son is older, I’m excited to continue my career!
                             </p>
+                            <p>
+                                When I'm not in front of VS Code, you're likely to find me watching Raptors basketball, at the gym or working on another Lego project with my son.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>professional</h3>
                             <p>
                                 My previous experience working in IT and education in Psychology
                                 informs my approach to development: understanding how people think is just as important as understanding technical
@@ -80,7 +77,7 @@
                                 benefit from life experience, perseverance and a solutions-focused mindset.
                             </p>
                             <p>
-                                Check out some of my projects below. If you want to get in touch you can contact me using the email form at the bottom of the page or reach out via LinkedIn or Twitter.
+                                Check out some of my <a href="#projects" class="animated infinite pulse delay-2s">projects</a> below. If you want to get in touch you can <a href="#contact">contact</a> me using the email form or reach out via <a href="https://www.linkedin.com/in/nicholas-a-mckenzie">LinkedIn</a> or <a href="https://twitter.com/nmckenz_codes">Twitter</a>.
                             </p>
                         </div>
                     </div>
@@ -95,7 +92,7 @@
             <!-- begin wrapper -->
             <div class="wrapper">
                 <h2>skills</h2>
-                <ul class="skillsList">
+                <ul class="skillsList" data-aos="slide-up">
                     <li class="html5Icon">
                         <i class="devicon-html5-plain" aria-hidden="true" title="HTML5"></i>
                         <h4>html5</h4>
@@ -218,47 +215,56 @@
             <div class="wrapper">
                 <h2>contact</h2>
 
-                <form action="http://www.focuspocus.io/magic/bab5a94d7d5e15f185bf463d174fb4f1" method="POST">
-                    <label for="name" class="visuallyhidden">name</label>
-                    <input type="text" id="name" name="name" placeholder="Name" required>
-                
-                    <label for="email" class="visuallyhidden">email address</label>
-                    <input type="email" id="email" name="email" placeholder="E-mail" title="Please input a valid email address" required>
-                
-                    <label for="message" class="visuallyhidden">comment</label>
-                    <textarea name="message" id="message" name="message" cols="30" rows="15" placeholder="Message" required></textarea>
-                
-                    <button type="submit">submit</button>
-                </form>
+                <div data-aos="slide-up">
+                    <form action="http://www.focuspocus.io/magic/bab5a94d7d5e15f185bf463d174fb4f1" method="POST">
+                        <label for="name" class="visuallyhidden">name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                    
+                        <label for="email" class="visuallyhidden">email address</label>
+                        <input type="email" id="email" name="email" placeholder="E-mail" title="Please input a valid email address" required>
+                    
+                        <label for="message" class="visuallyhidden">comment</label>
+                        <textarea name="message" id="message" name="message" cols="30" rows="15" placeholder="Message" required></textarea>
+                    
+                        <button type="submit">submit</button>
+                    </form>
+    
+                    <ul class="socialLinks">
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicholas-a-mckenzie">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nmckenz">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/nmckenz_codes">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://medium.com/@nicholas.a.mckenzie">
+                                <i class="fab fa-medium-m"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-                <ul class="socialLinks">
-                    <li>
-                        <a href="https://www.linkedin.com/in/nicholas-a-mckenzie">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/nmckenz">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/nmckenz_codes">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://medium.com/@nicholas.a.mckenzie">
-                            <i class="fab fa-medium-m"></i>
-                        </a>
-                    </li>
-                </ul>
-                
-                <div>
-                    <a href="#home">home</a>
                 </div>
             </div>
             <!-- end wrapper -->
+            <nav>
+                <ul>
+                    <li class="home"><a href="#home">home</a></li class=""><!--
+                    --><li class="about"><a href="#about">about</a></li><!--
+                    --><li class="skills"><a href="#skills">skills</a></li><!--
+                    --><li class="projects"><a href="#projects">projects</a></li><!--
+                    --><li class="contact"><a href="#contact">contact</a></li>
+                    <hr />
+                </ul>
+            </nav>
         </section>
         <!-- end contact section -->
     </main>
@@ -273,6 +279,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="./scripts/script.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+        });
+    </script>
 </body>
 
 </html>
