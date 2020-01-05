@@ -1,3 +1,27 @@
 $primaryFontColor: #222222;
 $secondaryFontColor: #d6cdcd;
 $tertiaryFontColor: #f7484e;
+
+@mixin mqTablet {
+  @media (max-width: 900px) { 
+    @content; 
+  }
+}
+
+@mixin mqSmallTablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mqLargeMobile  {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin mqMobile {
+  @media (max-width: 400px) { 
+    @content; 
+  }
+}
