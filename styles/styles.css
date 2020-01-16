@@ -480,6 +480,18 @@ header .titleContainerMobile .name {
   }
 }
 
+@media (max-width: 600px) {
+  .aboutSection .aboutContent {
+    position: relative;
+  }
+}
+
+@media (max-width: 415px) {
+  .aboutSection .aboutContent {
+    grid-row-gap: 0;
+  }
+}
+
 .aboutSection .headshotContainer {
   -ms-grid-column: 2;
   grid-column: 2;
@@ -508,6 +520,19 @@ header .titleContainerMobile .name {
   }
 }
 
+@media (max-width: 600px) {
+  .aboutSection .headshotContainer .headshotGraphic {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 415px) {
+  .aboutSection .headshotContainer .headshotGraphic {
+    display: none;
+  }
+}
+
 .aboutSection .headshotContainer .headshot {
   max-width: 100%;
   position: absolute;
@@ -524,12 +549,6 @@ header .titleContainerMobile .name {
 @media (max-width: 768px) {
   .aboutSection .headshotContainer .headshot {
     display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .aboutSection .headshotContainer .headshot {
-    left: 80%;
   }
 }
 
@@ -551,7 +570,7 @@ header .titleContainerMobile .name {
 
 @media (max-width: 600px) {
   .aboutSection .headshotContainer .headshotMobile {
-    left: 80%;
+    left: 125%;
   }
 }
 
@@ -597,6 +616,22 @@ header .titleContainerMobile .name {
   }
 }
 
+@media (max-width: 600px) {
+  .aboutSection .bioContainer {
+    position: absolute;
+    top: 2%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 415px) {
+  .aboutSection .bioContainer {
+    position: relative;
+    margin: 0;
+  }
+}
+
 .aboutSection .bioContainer div {
   width: 80%;
   margin-left: 20%;
@@ -606,14 +641,6 @@ header .titleContainerMobile .name {
   .aboutSection .bioContainer div {
     width: 100%;
     margin: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .aboutSection .bioContainer .bioPersonal {
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
   }
 }
 
@@ -654,6 +681,12 @@ header .titleContainerMobile .name {
 @media (max-width: 600px) {
   .aboutSection .bioContainer p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .aboutSection .bioContainer p {
+    line-height: 1.75rem;
   }
 }
 
@@ -821,6 +854,12 @@ header .titleContainerMobile .name {
   }
 }
 
+@media (max-width: 415px) {
+  .projectsSection {
+    background-position: 45%;
+  }
+}
+
 .projectsSection h2 {
   text-align: right;
 }
@@ -849,6 +888,12 @@ header .titleContainerMobile .name {
   }
 }
 
+@media (max-width: 415px) {
+  .projectsSection .slickContainer {
+    height: 65vh;
+  }
+}
+
 .projectsSection .projects {
   display: -ms-grid;
   display: grid;
@@ -869,6 +914,13 @@ header .titleContainerMobile .name {
         grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 25px;
+  }
+}
+
+@media (max-width: 415px) {
+  .projectsSection .projects {
+    -ms-grid-rows: 25% 1fr;
+        grid-template-rows: 25% 1fr;
   }
 }
 
@@ -933,6 +985,12 @@ header .titleContainerMobile .name {
 @media (max-width: 600px) {
   .projectsSection .appLinks {
     margin-top: 25px;
+  }
+}
+
+@media (max-width: 415px) {
+  .projectsSection .appLinks {
+    margin-top: 0;
   }
 }
 
