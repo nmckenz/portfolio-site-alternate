@@ -19,18 +19,32 @@ header {
         margin-left: 70%;
 
         @include mqTablet {
+
+            position: absolute;
+            top: -50px;
             width: 100%;
             margin: 0;
-            // position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            transition: all 0.5s;
+            background: rgba(255,255,255,0.9);
         }
 
         ul {
             margin: 0;
             padding: 0;
+
+            @include mqTablet {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            @include mqLargeMobile {
+                width: 100%;
+            }
+
+            @include mqMobile {
+                width: 90%;
+                margin-right: 10%;
+            }
 
             li {
                 display: inline;
@@ -47,6 +61,10 @@ header {
                 color: $primaryFontColor;
                 font-size: 1rem;
                 text-transform: uppercase;
+
+                @include mqMobile {
+                    font-size: 0.85rem;
+                }
             }
 
             hr {
@@ -56,6 +74,10 @@ header {
                 background: $tertiaryFontColor;
                 border: none;
                 transition: .3s ease-in-out;
+
+                @include mqTablet {
+                    display: none;
+                }
             }
 
             .about:hover ~ hr {
@@ -74,6 +96,79 @@ header {
                 margin-left: 80%;
             }
         }
+    }
+
+    .fa-bars {
+        font-size: 3rem;
+        color: $primaryFontColor;
+
+        @include mqMobile {
+            font-size: 2.5rem;
+        }
+    }
+
+    .fa-times {
+        font-size: 3rem;
+        color: $primaryFontColor;
+
+        @include mqMobile {
+            font-size: 2.5rem;
+        }
+    }
+
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label[icon-type="bars"] {
+        display: none;
+        position: absolute;
+        z-index: 20;
+        top: 0px;
+        right: 5px;
+        transition: all 0.5s;
+
+        @include mqTablet {
+            display: block;
+        }
+    }
+
+    input[type="checkbox"]:checked + nav {
+        top: 0;
+        z-index: 10;
+
+        @include mqTablet {
+            position: fixed;
+        }
+    }
+
+    label[icon-type="times"] {
+        display: none;
+        position: absolute;
+        z-index: 20;
+        top: 0px;
+        right: 5px;
+        transition: all 0.5s;
+        
+        @include mqTablet {
+            display: block;
+        }
+    }
+
+    input[type="checkbox"]:checked ~ label[icon-type="bars"] {
+        transform: scale(0);
+    }
+
+    input[type="checkbox"] ~ label[icon-type="times"] {
+        transform: scale(0);
+        display: block;
+        position: fixed;
+    }
+
+    input[type="checkbox"]:checked ~ label[icon-type="times"] {
+        transform: scale(1)
+        
     }
 
     .titleContainer {
@@ -111,14 +206,8 @@ header {
             display: block;
             transform-origin: unset;
             transform: none;
-            // position: absolute;
-            // top: 30%;
-            // left: 0;
             margin: 0 auto;
-            // width: 100%;
-            // margin-top: 18vh;
-            // width: 90%;
-            margin-top: 32.25vh;
+            padding-top: 30vh;
         }
         
         .name {
@@ -134,25 +223,16 @@ header {
                 mix-blend-mode: screen;
                 border: 5px solid black;
                 text-align: center;
-                
-                // color: white;
-                // background: black;
-                // mix-blend-mode: multiply;
-                // border: 5px solid;
-                // text-align: center;
+            }
+
+            @include mqMobile {
+                font-size: 4.5rem;
             }
         }
         
         p {
             @include mqLargeMobile {
-                // color: #000;
-                // background: #fff;
-                // mix-blend-mode: screen;
-                // border: 5px solid black;
-                // text-align: center;
-                
                 color: $secondaryFontColor;
-                // color: $primaryFontColor;
                 background: $tertiaryFontColor;
                 text-align: center;
                 font-size: 1.5rem;

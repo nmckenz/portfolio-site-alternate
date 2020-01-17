@@ -304,18 +304,39 @@ header nav {
 
 @media (max-width: 900px) {
   header nav {
+    position: absolute;
+    top: -50px;
     width: 100%;
     margin: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    background: rgba(255, 255, 255, 0.9);
   }
 }
 
 header nav ul {
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  header nav ul {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 415px) {
+  header nav ul {
+    width: 90%;
+    margin-right: 10%;
+  }
 }
 
 header nav ul li {
@@ -334,6 +355,12 @@ header nav ul a {
   text-transform: uppercase;
 }
 
+@media (max-width: 415px) {
+  header nav ul a {
+    font-size: 0.85rem;
+  }
+}
+
 header nav ul hr {
   height: .25rem;
   width: 20%;
@@ -342,6 +369,12 @@ header nav ul hr {
   border: none;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  header nav ul hr {
+    display: none;
+  }
 }
 
 header nav ul .about:hover ~ hr {
@@ -358,6 +391,92 @@ header nav ul .projects:hover ~ hr {
 
 header nav ul .contact:hover ~ hr {
   margin-left: 80%;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: #222222;
+}
+
+@media (max-width: 415px) {
+  header .fa-bars {
+    font-size: 2.5rem;
+  }
+}
+
+header .fa-times {
+  font-size: 3rem;
+  color: #222222;
+}
+
+@media (max-width: 415px) {
+  header .fa-times {
+    font-size: 2.5rem;
+  }
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+header label[icon-type="bars"] {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  right: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 900px) {
+  header label[icon-type="bars"] {
+    display: block;
+  }
+}
+
+header input[type="checkbox"]:checked + nav {
+  top: 0;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  header input[type="checkbox"]:checked + nav {
+    position: fixed;
+  }
+}
+
+header label[icon-type="times"] {
+  display: none;
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  right: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 900px) {
+  header label[icon-type="times"] {
+    display: block;
+  }
+}
+
+header input[type="checkbox"]:checked ~ label[icon-type="bars"] {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+header input[type="checkbox"] ~ label[icon-type="times"] {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  display: block;
+  position: fixed;
+}
+
+header input[type="checkbox"]:checked ~ label[icon-type="times"] {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 header .titleContainer {
@@ -407,7 +526,7 @@ header .titleContainerMobile {
     -webkit-transform: none;
             transform: none;
     margin: 0 auto;
-    margin-top: 32.25vh;
+    padding-top: 30vh;
   }
 }
 
@@ -423,6 +542,12 @@ header .titleContainerMobile .name {
     mix-blend-mode: screen;
     border: 5px solid black;
     text-align: center;
+  }
+}
+
+@media (max-width: 415px) {
+  header .titleContainerMobile h1 {
+    font-size: 4.5rem;
   }
 }
 
@@ -672,6 +797,12 @@ header .titleContainerMobile .name {
   background: #f7484e;
 }
 
+@media (max-width: 415px) {
+  .aboutSection .bioContainer h3 {
+    margin: 15px 0;
+  }
+}
+
 .aboutSection .bioContainer p {
   font-size: 1.25rem;
   line-height: 2.15rem;
@@ -686,7 +817,7 @@ header .titleContainerMobile .name {
 
 @media (max-width: 415px) {
   .aboutSection .bioContainer p {
-    line-height: 1.75rem;
+    line-height: 1.4rem;
   }
 }
 
@@ -1138,6 +1269,20 @@ header .titleContainerMobile .name {
   opacity: 1;
 }
 
+.contactSection .backToTop {
+  width: 100%;
+  text-align: center;
+}
+
+.contactSection .backToTop a {
+  color: #222222;
+  font-size: 2rem;
+}
+
+.contactSection .backToTop a:hover, .contactSection .backToTop a:focus {
+  color: #f7484e;
+}
+
 .contactSection nav {
   width: 30%;
   margin: 10px auto 0;
@@ -1195,4 +1340,15 @@ header .titleContainerMobile .name {
 
 .contactSection nav ul .projects:hover ~ hr {
   margin-left: 60%;
+}
+
+.contactSection .copyright {
+  text-align: center;
+}
+
+.contactSection .copyright p {
+  text-transform: capitalize;
+  color: #222222;
+  font-size: 0.4rem;
+  opacity: 0;
 }

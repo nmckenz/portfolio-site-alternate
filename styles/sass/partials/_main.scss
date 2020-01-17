@@ -185,6 +185,10 @@
                 margin: 5px 0 0;
                 background: $tertiaryFontColor;
             }
+
+            @include mqMobile {
+                margin: 15px 0;
+            }
         }
         
         p {
@@ -197,7 +201,7 @@
             }
 
             @include mqMobile {
-                line-height: 1.75rem;
+                line-height: 1.4rem;
             }
         }
 
@@ -291,7 +295,6 @@
     
     li {
         width: 100px;
-        // height: 100px;
         list-style-type: none;
         text-align: center;
 
@@ -388,7 +391,6 @@
         grid-column-gap: 25px;
         grid-row-gap: 0px;
         width: 100%;
-        // height: 100%;
 
         @include mqTablet {
             grid-template-columns: 1fr;
@@ -405,6 +407,7 @@
     .screenshotContainer {
         grid-column: 2;
         grid-row: 1;
+
         img {
             max-width: 100%;
         }
@@ -431,12 +434,6 @@
                 // margin-top: 15px;
             }
         }
-
-        // li {
-        //     @include mqLargeMobile {
-        //         line-height: 0.5rem;
-        //     }
-        // }
         
         p {
             margin: 0.25rem;
@@ -506,7 +503,6 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 90% 1fr;
-        // grid-template-rows: 90% 10%;
         grid-row-gap: 25px;
 
         width: 100%;
@@ -555,7 +551,6 @@
         padding: 0;
         width: 35%;
         text-align: center;
-        // margin: 25px auto 75px;
         margin: 25px auto 0;
 
         li {
@@ -564,7 +559,6 @@
 
         @include mqTablet {
             width: 100%;
-            // margin: 25px auto;
         }
 
         a {
@@ -601,7 +595,18 @@
         }
     }
 
-    .contactNav {
+    .backToTop {
+        width: 100%;
+        text-align: center;
+
+        a {
+            color: $primaryFontColor;
+            font-size: 2rem;
+        }
+
+        a:hover, a:focus {
+            color: $tertiaryFontColor;
+        }
     }
     
     nav {
@@ -659,6 +664,17 @@
                 margin-left: 60%;
             }
 
+        }
+    }
+    
+    .copyright {
+        text-align: center;
+    
+        p {
+            text-transform: capitalize;
+            color: $primaryFontColor;
+            font-size: 0.4rem;
+            opacity: 0;
         }
     }
 }

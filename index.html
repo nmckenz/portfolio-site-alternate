@@ -22,6 +22,7 @@
     <!-- begin header -->
     <header id="home">
         <!-- begin nav -->
+        <input type="checkbox" id="toggle" name="toggle">
         <nav>
             <ul>
                 <li class="home"><a href="#home">home</a></li class=""><!--
@@ -29,9 +30,11 @@
                 --><li class="skills"><a href="#skills">skills</a></li><!--
                 --><li class="projects"><a href="#projects">projects</a></li><!--
                 --><li class="contact"><a href="#contact">contact</a></li>
-                <hr />
+                <hr class="navSlider" />
             </ul>
         </nav>
+        <label for="toggle" icon-type="bars"><i class="fa fa-bars"></i></label>
+        <label for="toggle" icon-type="times"><i class="fas fa-times"></i></label>
         <!-- end nav -->
         <!-- begin wrapper -->
         <div class="wrapper">
@@ -224,7 +227,7 @@
             <div class="wrapper">
                 <h2>contact</h2>
                 <div class="contactContainer">
-                    <div class="contactContent" data-aos="slide-up">
+                    <div class="contactContent" data-aos="slide-right">
                         <form action="http://www.focuspocus.io/magic/bab5a94d7d5e15f185bf463d174fb4f1" method="POST">
                             <label for="name" class="visuallyhidden">name</label>
                             <input type="text" id="name" name="name" placeholder="Name" required>
@@ -233,7 +236,7 @@
                             <input type="email" id="email" name="email" placeholder="E-mail" title="Please input a valid email address" required>
                         
                             <label for="message" class="visuallyhidden">comment</label>
-                            <textarea name="message" id="message" name="message" cols="30" rows="15" placeholder="Message" required></textarea>
+                            <textarea name="message" id="message" name="message" cols="30" rows="12" placeholder="Message" required></textarea>
                         
                             <button type="submit">submit</button>
                         </form>
@@ -262,18 +265,12 @@
                         </ul>
     
                     </div>
-                    <div class="contactNav">
-                        <nav>
-                            <ul>
-                                <li class="home"><a href="#home">home</a></li class=""><!--
-                                --><li class="about"><a href="#about">about</a></li><!--
-                                --><li class="skills"><a href="#skills">skills</a></li><!--
-                                --><li class="projects"><a href="#projects">projects</a></li><!--
-                                --><li class="contact"><a href="#contact">contact</a></li>
-                                <hr />
-                            </ul>
-                        </nav>
+                    <div class="backToTop">
+                        <a href="#home"><i class="fas fa-chevron-up"></i></a>
                     </div>
+                </div>
+                <div class="copyright">
+                    <p>copyright <i class="far fa-copyright"></i> 2020 Nicholas McKenzie</p>
                 </div>
             </div>
             <!-- end wrapper -->
@@ -281,12 +278,6 @@
         <!-- end contact section -->
     </main>
     <!-- end main -->
-
-    <!-- begin footer -->
-    <footer>
-
-    </footer>
-    <!-- end footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
     <script src="./scripts/script.js"></script>

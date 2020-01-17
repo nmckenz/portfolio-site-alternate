@@ -13,4 +13,12 @@ $(function () {
         swipe: true,
   });
 
+  // let options = {
+  //   threshold: [0.33, 0.66, 1]
+  // };
+
+  // let observer = new IntersectionObserver(callback, options);
+
+  // let target = document.querySelector("#about");
+  // observer.observe(target)
 });
